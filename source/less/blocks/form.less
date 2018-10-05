@@ -1,0 +1,497 @@
+// ФОРМА.
+
+// Секции формы.
+
+.form__section-1 {
+  margin-bottom: 10px;
+}
+
+// Заголовки секций формы.
+
+.form__section-header {
+  .outline-2;
+  position: relative;
+}
+
+.form__section-header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 32px;
+  height: 3px;
+  background-color: @green;
+}
+
+.form__section-name {
+  .outline-1;
+  position: relative;
+  .side-margin(auto);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 320px;
+  background-color: transparent;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.form__section-name h3 {
+  .outline-2;
+  display: inline-block;
+  margin: 0;
+  .side-padding();
+  background-color: @white;
+  .font(24px; 24px);
+  font-weight: normal;
+  color: @black;
+  text-transform: none;
+}
+
+// Подразделы секций формы.
+
+.form__inner {
+  padding-top: 0;
+  padding-bottom: 0;
+  .side-padding();
+  margin-top: 0;
+  margin-bottom: 0;
+  .side-margin(auto);
+  width: 320px;
+  box-sizing: border-box;
+  // Временно:
+  // .outline-2;
+
+  &--id {
+    padding-top: 30px;
+    padding-bottom: 16px;
+  }
+
+  &--pro-type {
+    padding-left: calc(~"50% - 161px");
+    padding-right: calc(~"50% - 161px");
+    padding-top: 13px;
+    padding-bottom: 14px;
+    border: solid 1px #ededed;
+    width: 100%;
+  }
+
+  &--pro-type p {
+    padding-top: 10px;
+    padding-bottom: 9px;
+  }
+
+  &--contact {
+    padding-top: 8px;
+    padding-bottom: 10px;
+  }
+
+  &--comment {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  &--extra {
+    display: flex;
+    flex-direction: column;
+    padding-top: 14px;
+    padding-left: 66px;
+  }
+}
+
+// Графа формы.
+
+.form__field {
+  display: flex;
+  align-items: center;
+
+  &--email {
+    margin-bottom: 14px;
+  }
+}
+
+// Подписи полей.
+
+.form__legend {
+  .font(16px; 18px);
+  color: #222222;
+
+  &--extra-mod {
+    position: relative;
+    padding-bottom: 25px;
+  }
+
+  &--extra-mod::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -45px;
+    width: 28px;
+    height: 28px;
+    border: solid 1px #cfcfcf;
+  }
+}
+
+// Поля ввода данных.
+
+.form__input {
+  width: 100px;
+  height: 43px;
+  margin-left: 15px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  .side-padding(15px);
+  padding-top: 0;
+  padding-bottom: 0;
+  border: solid 1px #e7e7e7;
+  font-family: "Oswald", sans-serif;
+  .font(16px; 18px);
+  color: @darkgray;
+  text-transform: uppercase;
+
+  &--name,
+  &--weight,
+  &--age,
+  &--email,
+  &--phone {
+    flex-grow: 2;
+  }
+
+  &--email,
+  &--phone {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+// Особые поля ввода данных.
+// Поле ввода текстового комментария.
+
+.form__comment-area {
+  .form__input;
+  margin: 0;
+  padding: 15px 13px;
+  width: 252px;
+  min-height: 115px;
+}
+
+// Кнопка отправки формы.
+
+.form__button-wrapper {
+  text-align: center;
+  .side-margin(auto);
+  .side-padding();
+  width: 320px;
+  box-sizing: border-box;
+}
+
+.form__sending-form {
+  margin-top: 17px;
+  margin-bottom: 22px;
+  padding: 0;
+  width: 320px - 40px;
+  height: 40px;
+  border: none;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+}
+
+.form__note {
+  margin-bottom: 33px;
+  font-family: "Arial", sans-serif;
+  .font(14px; 16px);
+  text-transform: none;
+}
+
+// =============================================================================
+// Планшетная версия.
+
+// Секции формы.
+
+@media (min-width: @tablet-width) {
+  .form {
+    &__section-2 {
+      padding-top: 45px;
+    }
+
+    // Заголовки секций формы.
+
+    &__section-header::before {
+      top: 43px;
+    }
+
+    &__section-name {
+      width: @tablet-width;
+      .side-padding(30px);
+    }
+
+    &__section-name h3 {
+      .side-padding(40px);
+      .font(36px; 36px);
+    }
+
+    // Подразделы секций формы.
+
+    &__inner {
+      width: @tablet-width;
+      .side-padding(30px);
+
+      &--id {
+        padding-top: 57px;
+        padding-bottom: 62px;
+        padding-left: 72px;
+        padding-right: 67px;
+        border: none;
+      }
+
+      &--pro-type {
+        margin-bottom: 6px;
+        margin-left: calc(~"50% - 313px");
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 0;
+        padding-right: calc(~"50% - 313px");
+        width: 625px;
+        border-top: solid 1px #e6e6e6;
+        border-left: solid 1px #e6e6e6;
+        border-bottom: solid 1px #e6e6e6;
+        border-right: none;
+        box-sizing: content-box;
+      }
+
+      &--pro-type p {
+        padding-top: 17px;
+        padding-bottom: 13px;
+      }
+
+      &--contact {
+        margin-top: 37px;
+        margin-bottom: 24px;
+        .side-margin(auto);
+        padding-left: 70px;
+        padding-right: 65px;
+      }
+
+      &--comment {
+        margin-top: 54px;
+        margin-bottom: 38px;
+        .side-margin(auto);
+        padding-left: 69px;
+        padding-right: 67px;
+      }
+
+      &--extra {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        margin-top: 35px;
+        .side-margin(auto);
+        .side-padding(70px);
+        padding-top: 0;
+        min-height: 112px;
+      }
+    }
+
+    // Графы формы.
+
+    &__field {
+      margin: 0;
+
+      &--sugar,
+      &--water,
+      &--milk,
+      &--vitamins {
+        min-height: 40px;
+        width: 225px;
+        padding-left: 59px;
+      }
+    }
+
+    // Подписи полей формы.
+
+    &__legend {
+      .font(20px; 20px);
+
+      &--extra-mod {
+        padding: 0;
+      }
+
+      &--extra-mod::before {
+        left: -59px;
+        top: -10px;
+        width: 38px;
+        height: 38px;
+      }
+    }
+
+    // Поля ввода данных.
+
+    &__input {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      .side-padding(18px);
+      height: 50px;
+      .font(20px; 20px);
+    }
+
+    // Особые поля ввода данных.
+    // Поле ввода текстового комментария.
+
+    &__comment-area {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      .side-padding(18px);
+      width: 592px;
+      min-height: 153px;
+      .font(20px; 30px);
+    }
+
+    // Кнопка отправки формы.
+
+    &__button-wrapper {
+      display: flex;
+      align-items: center;
+      margin-top: 54px;
+      margin-bottom: 72px;
+      .side-margin(auto);
+      .side-padding(30px);
+      width: @tablet-width;
+      box-sizing: border-box;
+    }
+
+    &__sending-form {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 40px;
+      margin-right: 60px;
+      width: 285px;
+      height: 52px;
+      .font(20px; 20px);
+    }
+
+    &__note {
+      margin: 0;
+      .font(16px; 16px);
+    }
+  }
+}
+
+// =============================================================================
+// Десктопная версия.
+
+// Секции формы.
+
+@media (min-width: @desktop-width) {
+  .form {
+    &__section-1 {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 67px;
+      margin-bottom: 4px;
+      .side-margin(auto);
+      .side-padding(40px);
+      width: @desktop-width;
+      min-height: 196px;
+      box-sizing: border-box;
+    }
+
+    // Заголовки секций формы.
+
+    &__section-name {
+      width: @desktop-width;
+      .side-padding(40px);
+    }
+
+    // Подразделы секций формы.
+
+    &__inner {
+      &--id {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .intend-0;
+        width: 570px;
+      }
+
+      &--pro-type {
+        .intend-0;
+        width: 570px;
+        border-right: solid 1px #e6e6e6;
+      }
+
+      &--contact {
+        display: flex;
+        justify-content: space-between;
+        .side-margin(auto);
+        .side-padding(40px);
+        width: @desktop-width;
+      }
+
+      &--comment {
+        .side-margin(auto);
+        margin-bottom: 40px;
+        .side-padding(40px);
+        width: @desktop-width;
+      }
+
+      &--extra {
+        margin-top: 35px;
+        .side-margin(auto);
+        .side-padding(40px);
+        width: @desktop-width;
+        min-height: 40px;
+      }
+    }
+
+    // Графы формы.
+
+    &__field {
+      &--tel,
+      &--email {
+        width: 570px;
+      }
+
+      &--sugar,
+      &--water,
+      &--milk,
+      &--vitamins {
+        width: 185px;
+        height: 40px;
+        padding-left: 60px;
+      }
+    }
+
+    // Поля ввода данных.
+
+    &__input {
+      &--name,
+      &--weight,
+      &--age {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    // Особые поля ввода данных.
+    // Поле ввода текстового комментария
+
+    &__comment-area {
+      width: 1182px;
+    }
+
+    // Кнопка отправки формы.
+
+    &__button-wrapper {
+      margin-top: 60px;
+      margin-bottom: 83px;
+      .side-margin(auto);
+      .side-padding(0);
+      width: @desktop-width;
+    }
+
+    &__sending-form {
+      width: 568px;
+      margin-right: 83px;
+    }
+  }
+}

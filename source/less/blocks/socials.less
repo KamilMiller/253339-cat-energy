@@ -1,0 +1,30 @@
+// КНОПКИ СОЦИАЛЬНЫХ СЕТЕЙ.
+
+.socials__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+}
+
+.socials__item {
+  display: block;
+  .side-margin(17px);
+  // Временно:
+  width: 22px;
+  height: 19px;
+  background-color: @image;
+}
+
+@media (min-width: @tablet-width) {
+  .socials__item {
+    .side-margin(14px);
+    // Временно:
+    width: 30px;
+    height: 28px;
+  }
+}

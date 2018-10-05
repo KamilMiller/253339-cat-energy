@@ -1,0 +1,131 @@
+// КАРТОЧКА ОСНОВНОГО ТОВАРА.
+
+.item-1 {
+  background-color: @white;
+  border-bottom: solid 1px #d9d9d9;
+  // Временно:
+  // .outline-2;
+}
+
+.item-1__wrapper {
+  .side-margin(auto);
+  .side-padding();
+  width: 320px;
+  box-sizing: border-box;
+}
+
+.item-1__inner {
+  display: flex;
+  align-items: flex-end;
+}
+
+.item-1__box {
+  height: 144px;
+}
+
+.item-1__name {
+  margin: 0 60px 0 0;
+  color: @black;
+  .font(16px; 20px);
+  font-weight: normal;
+}
+
+.item-1__features {
+  color: @darkgray;
+  margin-top: 15px;
+  margin-bottom: 23px;
+  width: 100%;
+  font-family: "Arial", sans-serif;
+  .font(12px; 14px);
+  text-transform: none;
+  border: none;
+  border-collapse: collapse;
+}
+
+.item-1__parameter,
+.item-1__value {
+  height: 12px;
+}
+
+.item-1__value {
+  text-align: right;
+}
+
+.item-1__button {
+  margin-bottom: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .item-1 {
+    .side-padding(0);
+    width: 324px;
+    min-height: 571px;
+    background-color: @gray;
+    border: none;
+
+    &__wrapper {
+      width: auto;
+      .intend-0;
+    }
+
+    &__inner {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    &__box {
+      margin-bottom: 25px;
+      padding-top: 67px;
+      padding-bottom: 67px;
+      width: 100%;
+      height: 144px;
+      text-align: center;
+      background-image: linear-gradient(to bottom, @white 50%, @gray 50%);
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .side-margin(37px);
+      margin-bottom: 10px;
+    }
+
+    &__name {
+      .side-margin(60px);
+      text-align: center;
+      .font(20px; 20px);
+    }
+
+    &__features {
+      margin-top: 19px;
+      margin-bottom: 23px;
+      .font(16px; 16px);
+    }
+
+    &__features tr {
+      border-bottom: solid 1px #cdcdcd;
+    }
+
+    &__parameter,
+    &__value {
+      height: 30px;
+    }
+
+    &__button {
+      .side-margin(37px);
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .item-1 {
+    .outline-2;
+    width: 245px;
+    min-height: 573px;
+
+    &__name {
+      .side-margin(20px);
+    }
+  }
+}

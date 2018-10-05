@@ -1,0 +1,121 @@
+//  ОБЕРТКА БЛОКА "ДОПОЛНИТЕЛЬНЫЕ ТОВАРЫ".
+
+.extra-assortment {
+  position: relative;
+  // .side-padding();
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 14px;
+    height: 2px;
+    background-color: @green;
+  }
+
+  &__title {
+    position: relative;
+    .side-margin(auto);
+    margin-top: 29px;
+    margin-bottom: 30px;
+    width: 320px;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+
+  &__title h3 {
+    display: inline-block;
+    margin: 0;
+    .side-padding();
+    background-color: @white;
+    color: @black;
+    .font(24px; 24px);
+    font-weight: normal;
+    text-transform: none;
+  }
+
+  &__wrapper {
+    .side-margin(auto);
+    .side-padding();
+    width: 320px;
+    box-sizing: border-box;
+  }
+
+  &__inner {
+    margin-bottom: 39px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .extra-assortment {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 90px;
+      height: 3px;
+      background-color: @green;
+    }
+
+    &__title {
+      margin-top: 0;
+      margin-bottom: 0;
+      .side-margin(auto);
+      .side-padding(30px);
+      padding-top: 68px;
+      padding-bottom: 76px;
+      width: @tablet-width;
+    }
+
+    &__title h3 {
+      .side-padding(37px);
+      .font(36px; 36px);
+    }
+
+    &__wrapper {
+      .side-padding(30px);
+      width: @tablet-width;
+    }
+
+    &__inner {
+      margin-bottom: 69px;
+      border-left: solid 1px #cdcdcd;
+      border-right: solid 1px #cdcdcd;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra-assortment {
+    margin-bottom: 86px;
+
+    &::before {
+      top: 96px;
+    }
+
+    &__title {
+      padding-top: 75px;
+      .side-padding(0);
+      width: @desktop-width;
+    }
+
+    &__title h3 {
+      .side-padding(40px);
+    }
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      .side-padding(40px);
+      width: @desktop-width;
+    }
+
+    &__inner {
+      margin-bottom: 0;
+      min-width: 895px;
+      border: none;
+    }
+  }
+}

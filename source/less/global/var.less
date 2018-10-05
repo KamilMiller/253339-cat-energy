@@ -1,0 +1,65 @@
+// ПЕРЕМЕННЫЕ.
+
+// Размеры вьюпорта.
+
+@tablet-width: 768px;
+@desktop-width: 1300px;
+
+// Цвета.
+
+@white: #ffffff;
+@black: #111111;
+@gray: #f2f2f2;
+@darkgray: #444444;
+@green: #68b738;
+// Временно, для обозначения картинок:
+@image: rgba(245, 133, 80, 0.5);
+
+// Временно: внешние обводки.
+
+.outline-1() {
+  outline: dashed 1px blue;
+}
+
+.outline-2() {
+  outline: dashed 1px red;
+}
+
+// Отступы.
+
+.vertical-margin(@value: auto) {
+  margin-top: @value;
+  margin-bottom: @value;
+}
+
+.side-padding(@value: 20px) {
+  padding-left: @value;
+  padding-right: @value;
+}
+
+.side-margin(@value: 20px) {
+  margin-left: @value;
+  margin-right: @value;
+}
+
+.intend-0(@value: 0) {
+  padding: @value;
+  margin: @value;
+}
+
+// Размер шрифта и межстрочные расстояния.
+
+.font(@size; @line) {
+  font-size: @size;
+  line-height: @line;
+}
+
+// Заголовки.
+
+.h2-regular() {
+  color: @black;
+  margin: 0;
+  .font(36px; 60px);
+  font-weight: normal;
+  text-transform: none;
+}

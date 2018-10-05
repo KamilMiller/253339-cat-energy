@@ -1,0 +1,119 @@
+// БЛОК "СВОЙСТВА ТОВАРА".
+
+.advantages {
+  background-color: @white;
+}
+
+.advantages__main-wrapper {
+  display: flex;
+  flex-direction: column;
+  .outline-1;
+  .side-margin(auto);
+  margin-bottom: 23px;
+  .side-padding();
+  width: 320px;
+  box-sizing: border-box;
+}
+
+.advantages__title {
+  display: block;
+  .h2-regular;
+  margin-bottom: 27px;
+}
+
+.advantages__content-box {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.advantages__colour-back {
+  width: 60px;
+  height: 60px;
+  background-color: @green;
+}
+
+.advantages__text {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 20px;
+  width: 196px;
+  min-height: 60px;
+  color: @darkgray;
+  .font(14px; 18px);
+  font-family: "Arial", sans-serif;
+  text-transform: none;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    border-bottom: solid 1px #c6c6c6;
+
+    &__main-wrapper {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 0;
+      .side-padding(30px);
+      width: @tablet-width;
+    }
+
+    &__title {
+      flex-grow: 2;
+      margin-top: 15px;
+      margin-bottom: 40px;
+      min-width: 708px;
+      .font(60px; 60px);
+    }
+
+    &__content-box {
+      flex-direction: column;
+      width: 324px;
+      margin-top: 32px;
+      margin-bottom: 0;
+      min-height: 285px;
+      .outline-1;
+    }
+
+    &__colour-back {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 33px;
+    }
+
+    &__text {
+      display: block;
+      padding: 0;
+      width: 250px;
+      .font(16px; 24px);
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages {
+    border: none;
+
+    &__main-wrapper {
+      .side-padding(40px);
+      margin-bottom: 0;
+      width: @desktop-width;
+    }
+
+    &__title {
+      width: 1220px;
+      margin-top: 44px;
+      margin-bottom: 72px;
+    }
+
+    &__content-box {
+      margin-top: 0;
+      width: 245px;
+      min-height: 256px;
+    }
+
+    &__text {
+      width: 240px;
+    }
+  }
+}
