@@ -1,0 +1,122 @@
+// ХЭДЕР.
+
+.page-header {
+  background-color: @white;
+
+  &__main-wrapper {
+    border-bottom: solid 1px #e6e6e6;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    .side-margin(auto);
+    .side-padding();
+    width: 320px;
+    min-height: 65px;
+    box-sizing: border-box;
+  }
+
+  &__logo-mobile {
+    height: 38px;
+  }
+
+  &__logo {
+    display: none;
+    height: 58px;
+  }
+
+  &__text-logo {
+    margin-left: 58px;
+    height: 18px;
+  }
+
+  &__menu-toggle {
+    position: absolute;
+    top: 25px;
+    left: calc(~'((100% - 320px) / 2) + 280px');
+    width: 16px;
+    height: 16px;
+    border: none;
+    background: url("../img/icon-close.svg") center center no-repeat;
+    font-size: 0;
+    cursor: pointer;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__checkbox:checked + &__menu-toggle {
+    background: url("../img/icon-mobile-menu.svg") center center no-repeat;
+  }
+
+  &__checkbox:checked ~ nav {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    min-height: 140px;
+
+    &__container {
+      display: flex;
+      .side-margin(auto);
+      .side-padding(30px);
+      width: @tablet-width;
+      box-sizing: border-box;
+    }
+
+    &__main-wrapper {
+      margin-right: auto;
+      border: none;
+    }
+
+    &__inner {
+      padding-top: 24px;
+      .side-padding(0);
+      width: auto;
+      border: none;
+    }
+
+    &__logo-mobile {
+      display: none;
+    }
+
+    &__logo {
+      display: block;
+    }
+
+    &__text-logo {
+      display: none;
+    }
+
+    &__menu-toggle {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    min-height: 187px;
+    padding: 0;
+    .outline-1;
+
+    &--homepage {
+      background-image: linear-gradient(to right, @white calc(~"50% + 40px"), @green calc(~"50% + 40px"));
+      height: 696px;
+    }
+
+    &__container {
+      .side-padding(40px);
+      width: @desktop-width;
+    }
+
+    &__inner {
+      margin-right: auto;
+      padding-top: 54px;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+// ГЛАВНОЕ МЕНЮ.
+
+.main-nav {
+  background-color: @white;
+  color: @black;
+  .font(20px; 20px);
+
+  &__list {
+    .intend-0;
+    list-style: none;
+    text-align: center;
+  }
+
+  &__item {
+    display: block;
+    min-height: 15px;
+    padding-top: 22px;
+    padding-bottom: 23px;
+    border-bottom: solid 1px #e6e6e6;
+  }
+
+  &__item a {
+    display: inline-block;
+    width: 320px;
+    font-weight: bold;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    padding-top: 44px;
+    padding-bottom: 44px;
+
+    &__list {
+      display: flex;
+      min-width: 440px;
+      justify-content: space-between;
+    }
+
+    &__item {
+      padding: 0;
+      color: #222222;
+      border: none;
+      .font(18px; 25px);
+    }
+
+    &__item a {
+      font-weight: normal;
+      width: auto;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    .outline-2;
+    width: 570px;
+    padding-top: 72px;
+    padding-bottom: 77px;
+    background: transparent;
+    // background-image: url("");
+
+    &--homepage {
+      color: @white;
+    }
+
+    &__list {
+      justify-content: flex-end;
+      color: inherit;
+    }
+
+    &__item {
+      .font(20px; 25px);
+      margin-left: 35px;
+      color: inherit;
+    }
+
+    &__item a {
+      color: inherit;
+    }
+  }
+}

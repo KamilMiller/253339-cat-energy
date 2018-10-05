@@ -1,0 +1,64 @@
+// БЛОК "ПРОМО".
+
+.gift-box {
+  margin-bottom: 35px;
+  padding-top: 65px;
+  .side-padding(@value: 50px);
+  min-height: 224px;
+  background-color: @green;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  text-align: center;
+  color: @white;
+  font-family: "Arial", sans-serif;
+  .font(16px; normal);
+  text-transform: none;
+  // Временно:
+  .outline-2;
+}
+
+.gift-box__icon {
+  margin-bottom: 58px;
+}
+
+.gift-box__conditions {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .gift-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 76px;
+    padding: 0 120px 0 90px;
+    min-height: 200px;
+    background-image: none;
+
+    &__icon,
+    &__conditions {
+      margin-bottom: 0;
+    }
+
+    &__conditions {
+      max-width: 165px;
+      text-align: left;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gift-box {
+    flex-direction: column;
+    margin-bottom: 0;
+    padding-top: 65px;
+    padding-bottom: 45px;
+    .side-padding(40px);
+    min-height: 178px;
+    width: 165px;
+
+    &__conditions {
+      text-align: center;
+    }
+  }
+}

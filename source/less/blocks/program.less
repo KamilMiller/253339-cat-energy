@@ -1,0 +1,61 @@
+// РАЗДЕЛ "ПОДБОР ПРОГРАММЫ".
+// (заголовок раздела и обертка вложенной формы)
+
+.program {
+  color: @black;
+}
+
+.program__wrapper {
+  .side-margin(auto);
+  padding-top: 15px;
+  .side-padding();
+  width: 320px;
+  box-sizing: border-box;
+}
+
+.program__title {
+  .h2-regular();
+  margin-bottom: 25px;
+}
+
+.program__instruction {
+  display: inline-block;
+  margin: 0;
+  padding-right: 30px;
+  .font(14px; 18px);
+}
+
+@media (min-width: @tablet-width) {
+  .program {
+    &__wrapper {
+      padding-top: 0;
+      .side-padding(30px);
+      width: @tablet-width;
+    }
+
+    &__title {
+      margin-bottom: 55px;
+      .font(60px; 60px);
+    }
+
+    &__instruction {
+      padding-left: 40px;
+      padding-right: 324px;
+      .font(20px; 30px);
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program {
+    &__wrapper {
+      .side-padding(40px);
+      width: @desktop-width;
+    }
+
+    &__instruction {
+      padding-left: 0;
+      padding-right: 850px;
+    }
+  }
+}

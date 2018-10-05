@@ -1,0 +1,176 @@
+// БЛОК "ПРОГРАММЫ ПИТАНИЯ".
+
+.category-wrapper {
+  .outline-1;
+  .side-margin(auto);
+  .side-padding();
+  width: 320px;
+  box-sizing: border-box;
+}
+
+.category {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: @gray;
+  .side-padding();
+  margin-bottom: 18px;
+  // Временно:
+  .outline-2;
+}
+
+.category__icon {
+  margin-left: -20px;
+  // Временно.
+  width: 92px;
+  height: 98px;
+  background-color: @image;
+}
+
+.category__name {
+  display: flex;
+  min-height: 98px;
+  width: 320px - 92px - 20px * 4;
+}
+
+.category__name h3 {
+  display: block;
+  flex-grow: 2;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: @black;
+  .font(24px; 37px);
+  font-weight: normal;
+}
+
+.category__content {
+  display: block;
+  margin: 0;
+  padding-bottom: 23px;
+  color: @darkgray;
+  font-family: "Arial", sans-serif;
+  .font(14px; 18px);
+  text-transform: none;
+  border-bottom: solid 1px #d9d9d9;
+}
+
+.category__link-wrapper {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 18px;
+}
+
+.category__link-text {
+  display: inline-block;
+  color: @black;
+  .font(16px; 16px);
+}
+
+.category__arrow {
+  display: inline-block;
+}
+
+@media (min-width: @tablet-width) {
+  .category-wrapper {
+    .side-padding(30px);
+    width: @tablet-width;
+  }
+
+  .category {
+    position: relative;
+    flex-direction: column;
+    .side-margin(0);
+    margin-bottom: 30px;
+    padding-top: 76px;
+    padding-bottom: 58px;
+    padding-left: 55px;
+    padding-right: 0;
+    min-height: 228px;
+
+    &__icon {
+      position: absolute;
+      width: 324px;
+      height: 372px;
+      right: 0;
+      top: 0;
+    }
+
+    &__name {
+      min-height: 30px;
+      width: @tablet-width - (30px * 2) - 55px - 324px;
+    }
+
+    &__name h3 {
+      .font(36px; 37px);
+      margin-top: 0;
+      margin-bottom: 26px;
+    }
+
+    &__content {
+      margin-bottom: 55px;
+      padding: 0;
+      width: @tablet-width - (30px * 2) - 55px - 324px;
+      border: none;
+      .font(16px; 24px);
+    }
+
+    &__content--1 {
+      width: 375px;
+    }
+
+    &__content--2 {
+      width: 343px;
+    }
+
+    &__link-wrapper {
+      padding: 0;
+    }
+
+    &__link-text {
+      .font(20px; 20px);
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .category-wrapper {
+    display: flex;
+    justify-content: space-between;
+    .side-padding(40px);
+    width: @desktop-width;
+  }
+
+  .category {
+    flex-direction: row;
+    width: 570px;
+    padding: 0;
+
+    &__icon {
+      position: relative;
+      margin: 0;
+      width: 216px;
+      height: 188px;
+    }
+
+    &__name {
+      min-height: 188px;
+      width: 570px - 216px;
+    }
+
+    &__name h3 {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    &__content {
+      flex-grow: 2;
+      .side-margin(52px);
+      margin-bottom: 30px;
+    }
+
+    &__link-wrapper {
+      flex-grow: 2;
+      .side-margin(52px);
+      margin-bottom: 57px;
+    }
+  }
+}
