@@ -12,12 +12,11 @@
   font-family: "Arial", sans-serif;
   .font(16px; normal);
   text-transform: none;
-  // Временно:
-  .outline-2;
 }
 
 .gift-box__icon {
   margin-bottom: 58px;
+  fill: @white;
 }
 
 .gift-box__conditions {
@@ -33,17 +32,18 @@
     margin-bottom: 76px;
     padding: 0 120px 0 90px;
     min-height: 200px;
-    background-image: none;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+  }
 
-    &__icon,
-    &__conditions {
-      margin-bottom: 0;
-    }
+  .gift-box__icon {
+    margin-bottom: 8px;
+  }
 
-    &__conditions {
-      max-width: 165px;
-      text-align: left;
-    }
+  .gift-box__conditions {
+    max-width: 165px;
+    margin-bottom: 0;
+    text-align: left;
+    line-height: 20px;
   }
 }
 
@@ -52,13 +52,14 @@
     flex-direction: column;
     margin-bottom: 0;
     padding-top: 65px;
-    padding-bottom: 45px;
+    padding-bottom: 41px;
     .side-padding(40px);
     min-height: 178px;
     width: 165px;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+  }
 
-    &__conditions {
-      text-align: center;
-    }
+  .gift-box__conditions {
+    text-align: center;
   }
 }

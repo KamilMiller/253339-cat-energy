@@ -1,7 +1,7 @@
 // БЛОК "ПРОГРАММЫ ПИТАНИЯ".
 
 .category-wrapper {
-  .outline-1;
+  // .outline-1;
   .side-margin(auto);
   .side-padding();
   width: 320px;
@@ -14,16 +14,34 @@
   background-color: @gray;
   .side-padding();
   margin-bottom: 18px;
-  // Временно:
-  .outline-2;
 }
 
 .category__icon {
+  position: relative;
   margin-left: -20px;
-  // Временно.
   width: 92px;
   height: 98px;
-  background-color: @image;
+}
+
+.category__icon::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: @green;
+  top: 24px;
+  left: 21px;
+}
+
+.category__pic {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .category__name {
@@ -65,8 +83,34 @@
   .font(16px; 16px);
 }
 
+.category__arrow,
+.category__arrow-long {
+  margin-left: 7px;
+  margin-bottom: 1px;
+}
+
 .category__arrow {
   display: inline-block;
+}
+
+.category__arrow-long {
+  display: none;
+}
+
+.category__link:hover .category__arrow {
+  display: none;
+}
+
+.category__link:hover .category__arrow-long {
+  display: inline-block;
+}
+
+.category__link:active .category__link-text {
+  color: #cccccc;
+}
+
+.category__link:active .category__arrow-long {
+  fill: #cccccc;
 }
 
 @media (min-width: @tablet-width) {
@@ -82,52 +126,79 @@
     margin-bottom: 30px;
     padding-top: 76px;
     padding-bottom: 58px;
-    padding-left: 55px;
+    padding-left: 53px;
     padding-right: 0;
     min-height: 228px;
+  }
 
-    &__icon {
-      position: absolute;
-      width: 324px;
-      height: 372px;
-      right: 0;
-      top: 0;
+  .category__icon {
+    position: absolute;
+    width: 324px;
+    height: 372px;
+    right: 0;
+    top: 0;
+
+    &::before {
+      width: 200px;
+      height: 200px;
+      top: 92px;
+      left: 62px;
+    }
+  }
+
+  .category__pic {
+    &--slim {
+      width: 140px;
+      height: 194px;
+      margin-top: 80px;
     }
 
-    &__name {
-      min-height: 30px;
-      width: @tablet-width - (30px * 2) - 55px - 324px;
+    &--pro {
+      width: 268px;
+      height: 112px;
+      margin-top: 135px;
     }
+  }
 
-    &__name h3 {
-      .font(36px; 37px);
-      margin-top: 0;
-      margin-bottom: 26px;
-    }
+  .category__name {
+    min-height: 30px;
+    width: @tablet-width - (30px * 2) - 55px - 324px;
+  }
 
-    &__content {
-      margin-bottom: 55px;
-      padding: 0;
-      width: @tablet-width - (30px * 2) - 55px - 324px;
-      border: none;
-      .font(16px; 24px);
-    }
+  .category__name h3 {
+    .font(36px; 37px);
+    margin-top: 0;
+    margin-bottom: 26px;
+  }
 
-    &__content--1 {
-      width: 375px;
-    }
+  .category__content {
+    margin-bottom: 55px;
+    padding: 0;
+    width: @tablet-width - (30px * 2) - 55px - 324px;
+    border: none;
+    .font(16px; 24px);
+  }
 
-    &__content--2 {
-      width: 343px;
-    }
+  .category__content--1 {
+    width: 375px;
+  }
 
-    &__link-wrapper {
-      padding: 0;
-    }
+  .category__content--2 {
+    width: 343px;
+  }
 
-    &__link-text {
-      .font(20px; 20px);
-    }
+  .category__link-wrapper {
+    padding: 0;
+  }
+
+  .category__link-text {
+    .font(20px; 20px);
+  }
+
+  .category__arrow,
+  .category__arrow-long {
+    margin-left: 20px;
+    margin-bottom: 3px;
   }
 }
 
@@ -143,34 +214,57 @@
     flex-direction: row;
     width: 570px;
     padding: 0;
+  }
 
-    &__icon {
-      position: relative;
-      margin: 0;
-      width: 216px;
-      height: 188px;
+  .category__icon {
+    position: relative;
+    margin: 0;
+    width: 216px;
+    height: 188px;
+
+    &::before {
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      left: 52px;
+    }
+  }
+
+  .category__pic {
+    &--slim {
+      width: 70px;
+      height: 97px;
+      margin-top: 41px;
+      margin-left: 66px;
     }
 
-    &__name {
-      min-height: 188px;
-      width: 570px - 216px;
+    &--pro {
+      width: 134px;
+      height: 56px;
+      margin-top: 68px;
+      margin-left: 34px;
     }
+  }
 
-    &__name h3 {
-      margin-top: auto;
-      margin-bottom: auto;
-    }
+  .category__name {
+    min-height: 188px;
+    width: 570px - 216px;
+  }
 
-    &__content {
-      flex-grow: 2;
-      .side-margin(52px);
-      margin-bottom: 30px;
-    }
+  .category__name h3 {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
 
-    &__link-wrapper {
-      flex-grow: 2;
-      .side-margin(52px);
-      margin-bottom: 57px;
-    }
+  .category__content {
+    flex-grow: 2;
+    .side-margin(52px);
+    margin-bottom: 30px;
+  }
+
+  .category__link-wrapper {
+    flex-grow: 2;
+    .side-margin(52px);
+    margin-bottom: 57px;
   }
 }

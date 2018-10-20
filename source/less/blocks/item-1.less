@@ -3,8 +3,6 @@
 .item-1 {
   background-color: @white;
   border-bottom: solid 1px #d9d9d9;
-  // Временно:
-  // .outline-2;
 }
 
 .item-1__wrapper {
@@ -62,70 +60,79 @@
     min-height: 571px;
     background-color: @gray;
     border: none;
+  }
 
-    &__wrapper {
-      width: auto;
-      .intend-0;
-    }
+  .item-1__wrapper {
+    width: auto;
+    .intend-0;
+  }
 
-    &__inner {
-      flex-direction: column;
-      align-items: stretch;
-    }
+  .item-1__inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
 
-    &__box {
-      margin-bottom: 25px;
-      padding-top: 67px;
-      padding-bottom: 67px;
-      width: 100%;
-      height: 144px;
-      text-align: center;
-      background-image: linear-gradient(to bottom, @white 50%, @gray 50%);
-    }
+  .item-1__box {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 278px;
+    box-sizing: border-box;
+    background-image: linear-gradient(to bottom, @white 50%, @gray 50%);
+  }
 
-    &__info {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      .side-margin(37px);
-      margin-bottom: 10px;
-    }
+  .item-1__box a {
+    display: block;
+  }
 
-    &__name {
-      .side-margin(60px);
-      text-align: center;
-      .font(20px; 20px);
-    }
+  .item-1__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .side-margin(37px);
+    margin-bottom: 10px;
+  }
 
-    &__features {
-      margin-top: 19px;
-      margin-bottom: 23px;
-      .font(16px; 16px);
-    }
+  .item-1__name {
+    .side-margin(60px);
+    text-align: center;
+    .font(20px; 20px);
+  }
 
-    &__features tr {
-      border-bottom: solid 1px #cdcdcd;
-    }
+  .item-1__features {
+    margin-top: 19px;
+    margin-bottom: 23px;
+    .font(16px; 16px);
+  }
 
-    &__parameter,
-    &__value {
-      height: 30px;
-    }
+  .item-1__features tr {
+    border-bottom: solid 1px #cdcdcd;
+  }
 
-    &__button {
-      .side-margin(37px);
-    }
+  .item-1__parameter,
+  .item-1__value {
+    height: 30px;
+  }
+
+  .item-1__button {
+    .side-margin(37px);
   }
 }
 
 @media (min-width: @desktop-width) {
   .item-1 {
-    .outline-2;
     width: 245px;
     min-height: 573px;
+  }
 
-    &__name {
-      .side-margin(20px);
-    }
+  .item-1__box {
+    padding-bottom: 4px;
+  }
+
+  .item-1__name {
+    .side-margin(20px);
   }
 }
