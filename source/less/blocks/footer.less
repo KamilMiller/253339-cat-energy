@@ -59,13 +59,23 @@
   text-align: center;
 }
 
+.site-footer__homelink {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 .site-footer__logo-text {
   margin-top: 39px;
   margin-bottom: 31px;
 }
 
 .site-footer__socials-box {
-  height: 62px;
+  min-height: 62px;
   border-bottom: solid 1px #d9d9d9;
 }
 
@@ -83,117 +93,135 @@
   text-transform: none;
 }
 
+.site-footer__copyright-link:active {
+  color: #c8c8c8;
+}
+
+.site-footer__academy-logo-box {
+  font-size: 0;
+}
+
+.site-footer__academy-logo {
+  fill: #666666;
+}
+
+.site-footer__academy-logo:hover {
+  fill: #68b738;
+}
+
+.site-footer__academy-logo:active {
+  fill: #c8e0ba;
+}
+
 @media (min-width: @tablet-width) {
-  .site-footer {
-    &__contact {
-      // .side-padding(71px);
-    }
+  .site-footer__contact {
+    // .side-padding(71px);
+  }
 
-    &__contact-wrapper {
-      justify-content: space-between;
-      .side-padding(71px);
-      width: @tablet-width;
-      min-height: 201px;
-    }
+  .site-footer__contact-wrapper {
+    justify-content: space-between;
+    .side-padding(71px);
+    width: @tablet-width;
+    min-height: 201px;
+  }
 
-    &__dealers {
-      width: 156px;
-    }
+  .site-footer__dealers {
+    width: 156px;
+  }
 
-    &__dealers p {
-      .font(20px; 25px);
-    }
+  .site-footer__dealers p {
+    .font(20px; 25px);
+  }
 
-    &__adress {
-      width: 160px;
-      text-align: right;
-    }
+  .site-footer__adress {
+    width: 160px;
+    text-align: right;
+  }
 
-    &__adress p {
-      .font(16px; 20px);
-    }
+  .site-footer__adress p {
+    .font(16px; 20px);
+  }
 
-    &__empty-line {
-      display: inline-block;
-      width: 150px;
-    }
+  .site-footer__empty-line {
+    display: inline-block;
+    width: 150px;
+  }
 
-    &__map-area {
-      height: 396px;
-    }
+  .site-footer__map-area {
+    height: 396px;
+  }
 
-    &__wrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      .side-padding(30px);
-      width: @tablet-width;
-      min-height: 150px;
-    }
+  .site-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .side-padding(30px);
+    width: @tablet-width;
+    min-height: 150px;
+  }
 
-    &__footer-logo {
-      height: 24px;
-      width: 162px;
-      text-align: left;
-      border: none;
-    }
+  .site-footer__footer-logo {
+    height: 24px;
+    width: 162px;
+    text-align: left;
+    border: none;
+  }
 
-    &__logo-text {
-      margin: 0;
-    }
+  .site-footer__logo-text {
+    margin: 0;
+  }
 
-    &__socials-box {
-      .side-margin(30px);
-      height: auto;
-      border-bottom: none;
-    }
+  .site-footer__socials-box {
+    .side-margin(30px);
+    height: auto;
+    border-bottom: none;
+  }
 
-    &__copyright {
-      width: 162px;
-    }
+  .site-footer__copyright {
+    width: 162px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .site-footer {
     position: relative;
+  }
 
-    &__contact {
-      position: absolute;
-      .side-padding(75px);
-      width: 570px;
-      top: 95px;
-      right: calc(~'50% + 40px');
-      .site-footer__contact--white;
-      box-sizing: border-box;
-    }
+  .site-footer__contact {
+    position: absolute;
+    .side-padding(75px);
+    width: 570px;
+    top: 95px;
+    right: calc(~"50% + 40px");
+    .site-footer__contact--white;
+    box-sizing: border-box;
+  }
 
-    &__contact-wrapper {
-      width: auto;
-      padding: 0;
-    }
+  .site-footer__contact-wrapper {
+    width: auto;
+    padding: 0;
+  }
 
-    &__dealers,
-    &__adress {
-      margin: 0;
-      padding: 0;
-      width: 169px;
-      text-align: left;
-    }
+  .site-footer__dealers,
+  .site-footer__adress {
+    margin: 0;
+    padding: 0;
+    width: 169px;
+    text-align: left;
+  }
 
-    &__map-area {
-      height: 400px;
-    }
+  .site-footer__map-area {
+    height: 400px;
+  }
 
-    &__wrapper {
-      .side-padding(40px);
-      width: @desktop-width;
-    }
+  .site-footer__wrapper {
+    .side-padding(40px);
+    width: @desktop-width;
+  }
 
-    &__footer-logo,
-    &__socials-box,
-    &__copyright {
-      .side-margin(0);
-    }
+  .site-footer__footer-logo,
+  .site-footer__socials-box,
+  .site-footer__copyright {
+    .side-margin(0);
   }
 }

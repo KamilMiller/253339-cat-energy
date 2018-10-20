@@ -2,8 +2,6 @@
 
 .item-2 {
   border-bottom: solid 1px #cdcdcd;
-  // Временно:
-  // .outline-2;
 
   &--border-top {
     border-top: solid 1px #cdcdcd;
@@ -22,10 +20,10 @@
 }
 
 .item-2__info {
-  margin-top: 12px;
+  display: flex;
+  margin-top: 14px;
   margin-bottom: 14px;
   width: 100%;
-  border-collapse: collapse;
   color: @darkgray;
   font-family: "Arial", sans-serif;
   .font(14px; 14px);
@@ -48,46 +46,47 @@
 @media (min-width: @tablet-width) {
   .item-2 {
     .side-padding(38px);
+  }
 
-    &__box {
-      display: flex;
-      align-items: flex-end;
-      padding: 0;
-      min-height: 44px;
-    }
+  .item-2__box {
+    display: flex;
+    align-items: flex-end;
+    padding: 0;
+    min-height: 44px;
+  }
 
-    &__name,
-    &__info {
-      width: 50%;
-    }
+  .item-2__name,
+  .item-2__info {
+    width: 50%;
+  }
 
-    &__name {
-      .font(20px; 20px);
-    }
+  .item-2__name {
+    .font(20px; 20px);
+  }
 
-    &__info {
-      margin: 0;
-      vertical-align: bottom;
-      .font(16px; 16px);
-    }
+  .item-2__info {
+    display: flex;
+    margin: 0;
+    vertical-align: bottom;
+    .font(16px; 16px);
+  }
 
-    &__number,
-    &__price {
-      text-align: right;
-    }
+  .item-2__number,
+  .item-2__price {
+    text-align: right;
+  }
 
-    &__number {
-      width: auto;
-    }
+  .item-2__number {
+    flex-grow: 1;
+  }
 
-    &__price {
-      width: 95px;
-    }
+  .item-2__price {
+    width: 94px;
+  }
 
-    &__button {
-      margin-top: 27px;
-      margin-bottom: 27px;
-    }
+  .item-2__button {
+    margin-top: 27px;
+    margin-bottom: 27px;
   }
 }
 
@@ -96,27 +95,27 @@
     display: flex;
     align-items: center;
     .side-padding(0);
+  }
 
-    &__box {
-      flex-grow: 2;
-      justify-content: space-between;
-      align-items: center;
-    }
+  .item-2__box {
+    flex-grow: 2;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    &__name,
-    &__info {
-      width: 285px;
-    }
+  .item-2__name,
+  .item-2__info {
+    width: 285px;
+  }
 
-    &__number {
-      text-align: left;
-    }
+  .item-2__number {
+    text-align: left;
+  }
 
-    &__button {
-      width: 245px;
-      margin-left: 40px;
-      margin-top: 15px;
-      margin-bottom: 16px;
-    }
+  .item-2__button {
+    width: 245px;
+    margin-left: 40px;
+    margin-top: 15px;
+    margin-bottom: 16px;
   }
 }

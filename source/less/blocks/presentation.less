@@ -19,7 +19,7 @@
 
 .presentation__summary {
   margin-top: 0;
-  margin-bottom: 29px;
+  margin-bottom: 27px;
   padding-right: 2px;
   color: @darkgray;
   font-family: "Arial", sans-serif;
@@ -28,7 +28,7 @@
 }
 
 .presentation__wrapper {
-  padding-bottom: 43px;
+  padding-bottom: 35px;
 }
 
 .presentation__inner {
@@ -76,7 +76,7 @@
 
 .presentation__outcome {
   color: @black;
-  margin-top: 17px;
+  margin-top: 20px;
   margin-bottom: 0;
   .font(14px; 20px);
   text-align: center;
@@ -84,11 +84,9 @@
 
 .presentation__gallery {
   margin-left: -20px;
-  margin-bottom: 30px;
-  // Временно:
+  margin-bottom: 41px;
   width: 320px;
   height: 232px;
-  background-color: @image;
 }
 
 .presentation__toggle {
@@ -103,78 +101,80 @@
     background-image:
       linear-gradient(to bottom, @white 0%, @white 620px, transparent 620px, transparent 100%),
       linear-gradient(to right, @gray 0%, @gray 50%, #eaeaea 50%, #eaeaea 100%);
+  }
 
-    &__main-wrapper {
-      position: relative;
-      .side-padding(30px);
-      padding-top: 43px;
-      padding-bottom: 0;
-      width: @tablet-width;
-    }
+  .presentation__main-wrapper {
+    position: relative;
+    .side-padding(30px);
+    padding-top: 43px;
+    padding-bottom: 0;
+    width: @tablet-width;
+  }
 
-    &__title {
-      .font(60px; 60px);
-      margin-bottom: 65px;
-    }
+  .presentation__title {
+    .font(60px; 60px);
+    margin-bottom: 65px;
+  }
 
-    &__summary {
-      .font(16px; 24px);
-      margin-bottom: 53px;
-    }
+  .presentation__summary {
+    .font(16px; 24px);
+    margin-bottom: 53px;
+  }
 
-    &__wrapper {
-      display: flex;
-      padding-bottom: 247px;
-    }
+  .presentation__result {
+    position: relative;
+  }
 
-    &__inner {
-      width: 366px;
-      margin-right: auto;
-    }
+  .presentation__wrapper {
+    display: flex;
+    padding-bottom: 247px;
+  }
 
-    &__data {
-      width: 162px;
-      height: 72px;
-    }
+  .presentation__inner {
+    width: 366px;
+    margin-right: auto;
+  }
 
-    &__data span {
-      .font(30px; 37px);
-    }
+  .presentation__data {
+    width: 162px;
+    height: 72px;
+  }
 
-    &__description {
-      margin-top: -8px;
-      .side-padding(8px);
-      max-width: 142px;
-      background-color: @white;
-    }
+  .presentation__data span {
+    .font(30px; 37px);
+  }
 
-    &__description p {
-      .font(14px; 14px);
-    }
+  .presentation__description {
+    margin-top: -8px;
+    .side-padding(8px);
+    max-width: 142px;
+    background-color: @white;
+  }
 
-    &__outcome {
-      margin-top: 8px;
-      margin-bottom: 0;
-      width: 175px;
-      text-align: right;
-      .font(20px; 28px);
-    }
+  .presentation__description p {
+    .font(14px; 14px);
+  }
 
-    &__gallery {
-      position: absolute;
-      margin: 0;
-      left: (@tablet-width - 444px) / 2;
-      bottom: 114px;
-      // Временно:
-      width: 444px;
-      height: 517px;
-      background-color: @image;
-    }
+  .presentation__outcome {
+    margin-top: 8px;
+    margin-bottom: 0;
+    width: 175px;
+    text-align: right;
+    .font(20px; 28px);
+  }
 
-    &__toggle {
-      padding-top: 365px;
-      padding-bottom: 71px;
-    }
+  .presentation__gallery {
+    position: absolute;
+    margin: 0;
+    left: 15px;
+    bottom: 113px;
+    width: 690px;
+    height: 517px;
+  }
+
+  .presentation__toggle {
+    padding-top: 362px;
+    padding-bottom: 67px;
   }
 }
 
@@ -183,82 +183,82 @@
     background-image:
       linear-gradient(to bottom, @white 0%, @white 190px, transparent 190px, transparent 100%),
       linear-gradient(to right, @gray 0%, @gray calc(~"50% + 325px"), #eaeaea calc(~"50% + 325px"), #eaeaea 100%);
+  }
 
-    &__main-wrapper {
-      display: flex;
-      flex-direction: column;
-      .side-padding(40px);
-      padding-top: 43px;
-      width: @desktop-width;
-    }
+  .presentation__main-wrapper {
+    display: flex;
+    flex-direction: column;
+    .side-padding(40px);
+    padding-top: 43px;
+    width: @desktop-width;
+  }
 
-    &__title {
-      display: block;
-      margin: 0;
-      padding-top: 10px;
-      padding-bottom: 65px;
-      min-height: 60px;
-      background-color: @white;
-      .font(60px; 60px);
-    }
+  .presentation__title {
+    display: block;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 65px;
+    min-height: 60px;
+    background-color: @white;
+    .font(60px; 60px);
+  }
 
-    &__summary {
-      margin: 0;
-      padding-right: (1300px - (570px * 2) - 80px) + 570px + 135px;
-      padding-top: 80px;
-      padding-bottom: 70px;
-      box-sizing: border-box;
-    }
+  .presentation__summary {
+    margin: 0;
+    padding-right: (1300px - (570px * 2) - 80px) + 570px + 135px;
+    padding-top: 80px;
+    padding-bottom: 70px;
+    box-sizing: border-box;
+  }
 
-    &__result {
-      display: flex;
-      align-items: flex-end;
-      width: 1220px;
-    }
+  .presentation__result {
+    display: flex;
+    align-items: flex-end;
+    width: 1220px;
+  }
 
-    &__wrapper {
-      flex-direction: column;
-      width: 366px;
-      margin: 0;
-      padding: 0;
-    }
+  .presentation__wrapper {
+    flex-direction: column;
+    width: 366px;
+    margin: 0;
+    padding: 0;
+  }
 
-    &__data {
-      width: 160px;
-      height: 70px;
-    }
+  .presentation__data {
+    width: 160px;
+    height: 70px;
+  }
 
-    &__description {
-      background-color: @gray;
-    }
+  .presentation__description {
+    background-color: @gray;
+  }
 
-    &__gallery {
-      position: absolute;
-      width: 650px;
-      height: 517px;
-      left: auto;
-      right: 0;
-      top: 0;
-      bottom: auto;
-    }
+  .presentation__gallery {
+    position: absolute;
+    width: 650px;
+    height: 517px;
+    left: 570px;
+    right: 0;
+    top: -425px;
+    bottom: auto;
+  }
 
-    &__toggle {
-      margin-bottom: 71px;
-      margin-right: 0;
-      padding: 0;
-      width: 570px;
-      background: none;
-    }
+  .presentation__toggle {
+    margin-bottom: 68px;
+    margin-right: 0;
+    padding: 0;
+    width: 570px;
+    background: none;
+  }
 
-    &__outcome {
-      margin-top: 50px;
-      margin-bottom: 71px;
-      width: 100%;
-      text-align: left;
-    }
+  .presentation__outcome {
+    margin-top: 50px;
+    margin-bottom: 71px;
+    width: 100%;
+    text-align: left;
+  }
 
-    &__outcome span {
-      margin-left: 60px;
-    }
+  .presentation__outcome span {
+    margin-left: 60px;
   }
 }

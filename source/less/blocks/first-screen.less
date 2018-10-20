@@ -1,7 +1,7 @@
 // ОБЛОЖКА И ЗАГОЛОВОК.
 
 .first-screen {
-  background-image: linear-gradient(to bottom, @green 64%, @white 64%);
+  background: url("../img/index-background-mobile@1x.jpg") no-repeat top center;
   color: @white;
 }
 
@@ -23,18 +23,15 @@
 
 .first-screen__slogan {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
   text-align: center;
   .font(14px; 14px);
 }
 
 .first-screen__can-image {
   .side-margin();
+  display: block;
   margin-bottom: 3px;
-  // Временно:
-  // width: 280px;
-  // height: 270px;
-  // background-color: @image;
 }
 
 .first-screen__link {
@@ -49,98 +46,96 @@
 @media (min-width: @tablet-width) {
   .first-screen {
     background-image: none;
+  }
 
-    &__main-wrapper {
-      display: flex;
-      flex-direction: column;
-      .side-margin(auto);
-      .side-padding(30px);
-      padding-top: 0;
-      width: @tablet-width;
-      box-sizing: border-box;
-    }
+  .first-screen__main-wrapper {
+    display: flex;
+    flex-direction: column;
+    .side-margin(auto);
+    .side-padding(30px);
+    padding-top: 0;
+    width: @tablet-width;
+    box-sizing: border-box;
+  }
 
-    &__headline {
-      display: block;
-      order: 1;
-      margin-left: 88px;
-      margin-right: 192px;
-      margin-bottom: 42px;
-      text-align: left;
-      color: @black;
-      .font(60px; 60px);
-    }
+  .first-screen__headline {
+    display: block;
+    order: 1;
+    margin-left: 88px;
+    margin-right: 192px;
+    margin-bottom: 42px;
+    text-align: left;
+    color: @black;
+    .font(60px; 60px);
+  }
 
-    &__slogan {
-      order: 2;
-      margin-left: 90px;
-      margin-right: 192px;
-      margin-bottom: 42px;
-      text-align: left;
-      color: @black;
-      .font(20px, 20px);
-    }
+  .first-screen__slogan {
+    order: 2;
+    margin-left: 90px;
+    margin-right: 192px;
+    margin-bottom: 46px;
+    text-align: left;
+    color: @black;
+    .font(20px, 20px);
+  }
 
-    &__can-image {
-      margin-top: -76px;
-      margin-bottom: 0;
-      .side-margin(0);
-      order: 4;
-      z-index: 1;
-      // Временно:
-      width: 709px;
-      height: 609px;
-    }
+  .first-screen__can-image {
+    .side-margin(0);
+  }
 
-    &__link {
-      order: 3;
-      margin-left: 90px;
-      margin-bottom: 0;
-      width: 245px;
-      padding-top: 17px;
-      padding-bottom: 18px;
-      .font(20px; 20px);
-      z-index: 2;
-    }
+  .first-screen picture {
+    margin-top: -80px;
+    margin-bottom: 0;
+    order: 4;
+    z-index: 1;
+    // Временно:
+    width: 709px;
+    height: 609px;
+  }
+
+  .first-screen__link {
+    order: 3;
+    margin-left: 90px;
+    margin-bottom: 0;
+    width: 245px;
+    padding-top: 17px;
+    padding-bottom: 18px;
+    .font(20px; 20px);
+    z-index: 2;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .first-screen {
-    // .side-padding(0);
 
-    &__main-wrapper {
-      .outline-2;
-      flex-wrap: wrap;
-      margin-top: -554px;
-      margin-bottom: 80px;
-      padding-top: 80px;
-      .side-padding(40px);
-      width: @desktop-width;
-      height: 554px;
-    }
+  .first-screen__main-wrapper {
+    flex-wrap: wrap;
+    margin-top: -554px;
+    margin-bottom: 80px;
+    padding-top: 80px;
+    .side-padding(40px);
+    width: @desktop-width;
+    height: 554px;
+  }
 
-    &__headline,
-    &__slogan {
-      margin-left: 80px;
-      margin-right: 0;
-      width: 490px;
-      z-index: 2;
-    }
+  .first-screen__headline,
+  .first-screen__slogan {
+    margin-left: 80px;
+    margin-right: 0;
+    width: 490px;
+    z-index: 2;
+  }
 
-    &__can-image {
-      margin-top: -80px;
-      margin-left: -195px;
-      order: 4;
-      z-index: 1;
-      // Временно:
-      width: 552px;
-      height: 499px;
-    }
+  .first-screen__can-image {
+    margin-top: 0;
+    margin-left: -120px;
+    order: 4;
+    z-index: 1;
+    width: 552px;
+    height: 499px;
+  }
 
-    &__link {
-      margin-top: 10px;
-      margin-left: 80px;
-    }
+  .first-screen__link {
+    margin-top: 5px;
+    margin-left: 80px;
   }
 }
