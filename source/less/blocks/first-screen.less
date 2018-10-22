@@ -1,8 +1,15 @@
 // ОБЛОЖКА И ЗАГОЛОВОК.
 
 .first-screen {
-  background: url("../img/index-background-mobile@1x.jpg") no-repeat top center;
   color: @white;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+    background-size: 320px 305px;
+  }
 }
 
 .first-screen__main-wrapper {
@@ -81,6 +88,8 @@
 
   .first-screen__can-image {
     .side-margin(0);
+    width: 709px;
+    height: 609px;
   }
 
   .first-screen picture {
@@ -106,7 +115,6 @@
 }
 
 @media (min-width: @desktop-width) {
-
   .first-screen__main-wrapper {
     flex-wrap: wrap;
     margin-top: -554px;

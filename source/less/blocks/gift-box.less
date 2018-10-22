@@ -33,6 +33,11 @@
     padding: 0 120px 0 90px;
     min-height: 200px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+      background-size: 708px 200px;
+    }
   }
 
   .gift-box__icon {
@@ -57,6 +62,11 @@
     min-height: 178px;
     width: 165px;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+      background-size: 245px 289px;
+    }
   }
 
   .gift-box__conditions {
