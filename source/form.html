@@ -114,9 +114,11 @@
         <div class="page-header__main-wrapper">
           <div class="page-header__inner">
             <a class="page-header__homelink" href="index.html">
-              <img class="page-header__logo-desktop" src="img/logo-desktop.svg" width="202" height="59" alt="Кэт энерджи">
-              <img class="page-header__logo-tablet" src="img/logo-tablet.svg" width="173" height="58" alt="Кэт энерджи">
-              <img class="page-header__logo-mobile" src="img/logo-mobile.svg" width="191" height="38" alt="Кэт энерджи">
+              <picture>
+                <source media="(min-width:1300px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width:768px)" srcset="img/logo-tablet.svg">
+                <img class="page-header__logo" src="img/logo-mobile.svg" width="191" height="38" alt="Кэт энерджи">
+              </picture>
             </a>
           </div>
         </div>

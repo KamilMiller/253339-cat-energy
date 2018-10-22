@@ -27,11 +27,11 @@
     opacity: 0.6;
   }
 }
-
-.page-header__logo-tablet,
-.page-header__logo-desktop {
-  display: none;
-}
+//
+// .page-header__logo-tablet,
+// .page-header__logo-desktop {
+//   display: none;
+// }
 
 .page-header__menu-toggle {
   position: absolute;
@@ -82,13 +82,18 @@
     border: none;
   }
 
-  .page-header__logo-mobile {
-    display: none;
+  .page-header__logo {
+    width: 173px;
+    height: 58px;
   }
 
-  .page-header__logo-tablet {
-    display: block;
-  }
+  // .page-header__logo-mobile {
+  //   display: none;
+  // }
+  //
+  // .page-header__logo-tablet {
+  //   display: block;
+  // }
 
   .page-header__menu-toggle {
     display: none;
@@ -105,12 +110,15 @@
     padding: 0;
 
     &--homepage {
-      background-image:
-        url("../img/index-background-desktop@1x.jpg"),
-        linear-gradient(to right, @white 50%, @green 50%);
+      background-image: url("../img/index-background-desktop@1x.jpg");
       background-repeat: no-repeat;
       background-position-x: calc(~"720px / 2 + 50%");
       height: 696px;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+        background-size: 720px auto;
+      }
     }
   }
 
@@ -124,11 +132,12 @@
     padding-top: 54px;
   }
 
-  .page-header__logo-tablet {
-    display: none;
+  .page-header__logo {
+    width: 202px;
+    height: 59px;
   }
 
-  .page-header__logo-desktop {
-    display: block;
+  .page-header__logo-tablet {
+    display: none;
   }
 }
