@@ -7,6 +7,7 @@
 *.psd
 *.sublime*
 node_modules/
+preview/
 npm-debug.*
 source/css/*.css
 Thumbs.db

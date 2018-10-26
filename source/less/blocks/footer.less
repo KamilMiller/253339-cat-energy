@@ -10,9 +10,11 @@
 
 .site-footer__contact-wrapper {
   display: flex;
-  align-items: center;
+  // align-items: center;
   .side-margin(auto);
   .side-padding();
+  padding-top: 30px;
+  padding-bottom: 20px;
   min-height: 114px;
   width: 320px;
   box-sizing: border-box;
@@ -70,7 +72,7 @@
 }
 
 .site-footer__logo-text {
-  margin-top: 39px;
+  margin-top: 40px;
   margin-bottom: 31px;
 }
 
@@ -82,8 +84,11 @@
 .site-footer__copyright {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
   min-height: 78px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  box-sizing: border-box;
   color: @darkgray;
 }
 
@@ -91,6 +96,7 @@
   .font(16px; 16px);
   font-family: "Arial", sans-serif;
   text-transform: none;
+  margin-right: auto;
 }
 
 .site-footer__copyright-link:active {
@@ -98,18 +104,20 @@
 }
 
 .site-footer__academy-logo-box {
+  display: block;
   font-size: 0;
-}
-
-.site-footer__academy-logo {
   fill: #666666;
 }
 
-.site-footer__academy-logo:hover {
+.site-footer__academy-logo {
+  pointer-events: none;
+}
+
+.site-footer__academy-logo-box:hover {
   fill: #68b738;
 }
 
-.site-footer__academy-logo:active {
+.site-footer__academy-logo-box:active {
   fill: #c8e0ba;
 }
 
@@ -119,14 +127,16 @@
   }
 
   .site-footer__contact-wrapper {
-    justify-content: space-between;
+    // justify-content: space-between;
     .side-padding(71px);
+    padding-top: 65px;
     width: @tablet-width;
     min-height: 201px;
   }
 
   .site-footer__dealers {
     width: 156px;
+    margin-right: auto;
   }
 
   .site-footer__dealers p {
@@ -153,8 +163,8 @@
 
   .site-footer__wrapper {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    // justify-content: space-between;
+    // align-items: center;
     .side-padding(30px);
     width: @tablet-width;
     min-height: 150px;
@@ -162,7 +172,9 @@
 
   .site-footer__footer-logo {
     height: 24px;
-    width: 162px;
+    margin-top: 65px;
+    margin-right: 18px;
+    // width: 162px;
     text-align: left;
     border: none;
   }
@@ -172,12 +184,16 @@
   }
 
   .site-footer__socials-box {
-    .side-margin(30px);
-    height: auto;
+    .side-margin(auto);
+    // height: auto;
     border-bottom: none;
   }
 
   .site-footer__copyright {
+    min-height: 34px;
+    margin-top: 58px;
+    margin-bottom: auto;
+    padding: 0;
     width: 162px;
   }
 }
@@ -199,16 +215,21 @@
 
   .site-footer__contact-wrapper {
     width: auto;
-    padding: 0;
+    .side-padding(0);
+    padding-top: 64px;
   }
 
   .site-footer__dealers,
   .site-footer__adress {
-    margin: 0;
+    // margin: 0;
     padding: 0;
     width: 169px;
     text-align: left;
   }
+  //
+  // .site-footer__dealers {
+  //   margin-right: auto;
+  // }
 
   .site-footer__map-area {
     height: 400px;
@@ -219,9 +240,8 @@
     width: @desktop-width;
   }
 
-  .site-footer__footer-logo,
-  .site-footer__socials-box,
   .site-footer__copyright {
     .side-margin(0);
+    margin-top: 60px;
   }
 }
