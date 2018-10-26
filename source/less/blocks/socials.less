@@ -3,9 +3,13 @@
 .socials {
   display: flex;
   align-items: center;
-  justify-content: center;
+  // justify-content: center;
   width: 100%;
-  height: 100%;
+  height: inherit;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  .side-padding(53px);
+  box-sizing: border-box;
 }
 
 .socials__link {
@@ -13,17 +17,18 @@
   .side-margin(20px);
   width: 18px;
   font-size: 0;
-}
-
-.socials__link svg {
   fill: #666666;
 }
 
-.socials__link:hover svg {
+.socials__link svg {
+  pointer-events: none;
+}
+
+.socials__link:hover {
   fill: #68b738;
 }
 
-.socials__link:active svg {
+.socials__link:active {
   fill: #c8e0ba;
 }
 
@@ -41,13 +46,24 @@
 
 @media (min-width: @tablet-width) {
   .socials {
-    width: 140px;
-    justify-content: space-between;
+    min-height: 28px;
+    width: 122px;
+    padding: 0;
+    margin-top: 62px;
+    margin-bottom: auto;
   }
 
   .socials__link {
-    width: 30px;
+    width: auto;
     .side-margin(0);
+  }
+
+  .socials__link:nth-child(2) {
+    .side-margin(28px);
+  }
+
+  .socials__link svg {
+    .side-margin(auto);
   }
 
   .socials__vk {
