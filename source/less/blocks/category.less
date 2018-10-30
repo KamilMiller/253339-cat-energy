@@ -1,14 +1,13 @@
 // БЛОК "ПРОГРАММЫ ПИТАНИЯ".
 
-.category-wrapper {
-  // .outline-1;
+.category {
   .side-margin(auto);
   .side-padding();
   width: 320px;
   box-sizing: border-box;
 }
 
-.category {
+.category__item {
   display: flex;
   flex-wrap: wrap;
   background-color: @gray;
@@ -45,8 +44,6 @@
 }
 
 .category__name {
-  // display: block;
-  // align-items: center;
   min-height: 98px;
   width: 320px - 92px - 20px * 4;
 }
@@ -118,12 +115,12 @@
 }
 
 @media (min-width: @tablet-width) {
-  .category-wrapper {
+  .category {
     .side-padding(30px);
     width: @tablet-width;
   }
 
-  .category {
+  .category__item {
     position: relative;
     flex-direction: column;
     .side-margin(0);
@@ -207,14 +204,13 @@
 }
 
 @media (min-width: @desktop-width) {
-  .category-wrapper {
+  .category {
     display: flex;
-    // justify-content: space-between;
     .side-padding(40px);
     width: @desktop-width;
   }
 
-  .category {
+  .category__item {
     flex-direction: row;
     width: 570px;
     padding: 0;
@@ -261,7 +257,6 @@
 
   .category__name h3 {
     margin-top: 76px;
-    // margin-bottom: auto;
   }
 
   .category__content {
