@@ -45,6 +45,7 @@
     "node": "8.12"
   },
   "dependencies": {
+    "gulp-htmlmin": "^5.0.1",
     "npm": "^6.4.1"
   }
 }

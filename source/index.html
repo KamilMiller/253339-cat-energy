@@ -5,7 +5,9 @@
     <title>CAT ENERGY</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
-    <script src="js/picturefill.js"></script>
+    <link rel="preload" href="font/oswaldregular.woff2" as="font">
+    <link rel="preload" href="font/oswaldmedium.woff2" as="font">
+    <script src="js/picturefill.min.js"></script>
   </head>
   <body>
 
@@ -147,9 +149,9 @@
           <a class="first-screen__link regular-button" href="form.html">подобрать программу</a>
         </div>
       </section>
-      <section class="category-wrapper">
+      <section class="category">
         <h2 class="visually-hidden">Популярные программы</h2>
-        <article class="category">
+        <article class="category__item">
           <div class="category__icon">
             <img class="category__pic category__pic--slim" src="img/icon-cat-slim.svg" width="35" height="49" alt="Похудение">
           </div>
@@ -171,7 +173,7 @@
             </a>
           </div>
         </article>
-        <article class="category">
+        <article class="category__item">
           <div class="category__icon">
             <img class="category__pic category__pic--pro" src="img/icon-cat-pro.svg" width="67" height="28" alt="Набор массы">
           </div>
