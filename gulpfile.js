@@ -8,6 +8,7 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
 var include = require("posthtml-include");
+var webp = require("gulp-webp")
 var imagemin = require('gulp-imagemin');
 var svgstore = require("gulp-svgstore");
 var server = require("browser-sync").create();
@@ -46,6 +47,12 @@ gulp.task("cssprod", function () {
     .pipe(gulp.dest("build/css"));
 });
 
+gulp.task("webp", function () {
+  return gulp.src("source/img/*.{jpg,png}")
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("build/img"))
+})
+
 gulp.task("images", function () {
   return gulp.src("source/img/*")
     .pipe(imagemin([
@@ -79,4 +86,4 @@ gulp.task("server", function () {
 });
 
 gulp.task("start", gulp.series("css", "server"));
-gulp.task("build", gulp.series("js", "fonts", "cssprod", "images", "htmlprod"));
+gulp.task("build", gulp.series("js", "fonts", "cssprod", "webp", "images", "htmlprod"));
